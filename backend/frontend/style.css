@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: #0b1020;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.container {
+    width: 100%;
+    max-width: 850px;
+    padding: 45px;
+    background: #11182d;
+    border: 1px solid #26304d;
+    border-radius: 24px;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.45);
+}
+
+/* Header */
+
+h1 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 12px;
+    letter-spacing: -1px;
+}
+
+.container > p {
+    text-align: center;
+    color: #9ba7c2;
+    font-size: 16px;
+    margin-bottom: 35px;
+}
+
+/* URL Input */
+
+.input-box {
+    display: flex;
+    gap: 12px;
+    background: #0b1020;
+    padding: 10px;
+    border: 1px solid #293653;
+    border-radius: 14px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    padding: 14px;
+    font-size: 16px;
+}
+
+input::placeholder {
+    color: #68748f;
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+    padding: 0 25px;
+    background: #ffffff;
+    color: #0b1020;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* Loading */
+
+#loading {
+    display: none;
+    text-align: center;
+    margin-top: 25px;
+    color: #9ba7c2;
+}
+
+/* Result */
+
+#result {
+    display: none;
+    margin-top: 35px;
+    padding: 28px;
+    background: #0b1020;
+    border: 1px solid #293653;
+    border-radius: 18px;
+}
+
+#result h2 {
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+#result p {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px solid #202a43;
+    color: #aab5cc;
+}
+
+#result strong {
+    color: white;
+}
+
+#domain,
+#https,
+#riskScore,
+#status {
+    color: white;
+    font-weight: bold;
+}
+
+/* Reasons */
+
+h3 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+#reasons {
+    padding-left: 20px;
+    color: #aab5cc;
+}
+
+#reasons li {
+    margin: 10px 0;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .input-box {
+        flex-direction: column;
+    }
+
+    button {
+        height: 48px;
+    }
+
+    #result p {
+        flex-direction: column;
+        gap: 5px;
+    }
+}

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Smart URL Analyzer</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Smart URL Analyzer</h1>
+
+      <p>Enter a URL and let the system analyze it.</p>
+
+      <div class="input-box">
+        <input type="text" id="urlInput" placeholder="https://example.com" />
+
+        <button onclick="analyzeURL()">Analyze</button>
+      </div>
+
+      <div id="loading">Analyzing...</div>
+
+      <div id="result">
+        <h2>Analysis Result</h2>
+
+        <p>
+          <strong>Domain:</strong>
+          <span id="domain"></span>
+        </p>
+
+        <p>
+          <strong>HTTPS:</strong>
+          <span id="https"></span>
+        </p>
+
+        <p>
+          <strong>Risk Score:</strong>
+          <span id="riskScore"></span>
+        </p>
+
+        <p>
+          <strong>Status:</strong>
+          <span id="status"></span>
+        </p>
+
+        <h3>Reasons</h3>
+
+        <ul id="reasons"></ul>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
